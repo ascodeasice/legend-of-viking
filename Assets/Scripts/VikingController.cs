@@ -11,14 +11,16 @@ public class VikingController : MonoBehaviour
 {
     public float jumpingForce;
     MeshRenderer mr;
-    [SerializeField] float movingSpeed = 10f;
-    [SerializeField] float torqueForce;
-    [SerializeField] Vector3 torqueDirection;
+    [SerializeField] float movingSpeed=10f;
+    [SerializeField] float runningSpeed=15f;
     Rigidbody rb;
     bool onGround = false;
     Animator animator;
     bool run = false;
     AudioSource footstep;
+
+    float animatorWalkSpeed = 1;
+    float animatorRunSpeed = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -34,39 +36,35 @@ public class VikingController : MonoBehaviour
     {
         animator.SetFloat("speed", 0f);
 
+        bool shiftIsPressed = Input.GetKey(KeyCode.LeftShift);
+
         if (Input.GetKey(KeyCode.W))
         {
-            animator.SetFloat("speed", movingSpeed);
-            transform.position += movingSpeed * Time.deltaTime * Vector3.forward;
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.forward;
+            animator.SetFloat("speed", (shiftIsPressed?animatorRunSpeed:animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += movingSpeed * Time.deltaTime * Vector3.left;
-            animator.SetFloat("speed", movingSpeed);
 
+            transform.position += (shiftIsPressed ? runningSpeed : movingSpeed) * Time.deltaTime * Vector3.left;
+            animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += movingSpeed * Time.deltaTime * Vector3.back;
-            animator.SetFloat("speed", movingSpeed);
-
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.back;
+            animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += movingSpeed * Time.deltaTime * Vector3.right;
-            animator.SetFloat("speed", movingSpeed);
-
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.right;
+            animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (onGround && Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(jumpingForce * Vector3.up);
             animator.SetBool("jumping", true);
         }
-        if (Input.GetKey(KeyCode.F))
-        {
-            rb.AddTorque(torqueForce * torqueDirection);
-        }
-        if(run&&!footstep.isPlaying)
+        if (run && !footstep.isPlaying)
         {
             footstep.Play();
         }
