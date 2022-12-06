@@ -12,7 +12,7 @@ The ground will show up nearby the player, so the player won’t fall in to the 
   - [x] Rotate left/right with camera “by mouse movement” (5%)
   - [x] Look up/down without moving the character “by mouse movement “(5%)
 - [ ] Battle mechanism (total 30%)
-    - [ ] Randomly generate emenies on the map (3%)
+    - [x] Randomly generate emenies on the map (3%)
     - [ ] If player and enemy is close enough, enemy will chase player (3%)
     - [ ] Both player and enemy can attack each other (5%)
     - [ ] If enemy is dead, show it’s corpse (5%)

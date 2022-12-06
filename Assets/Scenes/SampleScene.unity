@@ -397,7 +397,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1246927858
+--- !u!1 &1361678269
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,23 +405,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1246927859}
+  - component: {fileID: 1361678271}
+  - component: {fileID: 1361678270}
   m_Layer: 0
-  m_Name: groundSpawner
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1246927859
+--- !u!114 &1361678270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361678269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58102b0433971246bd4685cd101c498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 8991252580339083562, guid: ac9953a54cbe19b4eb5297d4e790fff8, type: 3}
+  maxEnemyCount: 10
+--- !u!4 &1361678271
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246927858}
+  m_GameObject: {fileID: 1361678269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7660117, y: -1.8701212, z: 5.968808}
+  m_LocalPosition: {x: 2.5, y: -3.3228319, z: 1.2846788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -573,6 +588,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1745278265, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
+      propertyPath: m_Size.x
+      value: 10.189663
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745278265, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
+      propertyPath: m_Size.y
+      value: 6.0904493
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745278265, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
+      propertyPath: m_Center.x
+      value: -0.000007951986
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745278265, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
+      propertyPath: m_Center.y
+      value: -3.0161333
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745278265, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000004185256
+      objectReference: {fileID: 0}
     - target: {fileID: 5671218218869011869, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
       propertyPath: m_RootOrder
       value: 1
