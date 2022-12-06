@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTile: {fileID: 5671218218869369277}
+  startGround: {fileID: 5671218218869369277}
 --- !u!65 &1745278265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278,8 +279,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.189661, y: 6.298407, z: 9.847618}
-  m_Center: {x: -0.000007867813, y: -2.9121501, z: -0.00000047683716}
+  m_Size: {x: 10.189663, y: 6.0904493, z: 9.847618}
+  m_Center: {x: -0.000007951986, y: -3.0161333, z: -0.0000004185256}
 --- !u!1 &5671218218869369279
 GameObject:
   m_ObjectHideFlags: 0

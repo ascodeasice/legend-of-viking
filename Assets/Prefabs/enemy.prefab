@@ -2463,6 +2463,7 @@ GameObject:
   - component: {fileID: 8991252580331789162}
   - component: {fileID: 2753940231974804585}
   - component: {fileID: 291896946191120629}
+  - component: {fileID: 2770416949212084034}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -2501,8 +2502,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8991252580339083562}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e7adda870136f9040b82aaa84394d7e7, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: ac331b525a4577e46aa9942c1016219d, type: 3}
+  m_Controller: {fileID: 9100000, guid: c3df818a0a0d98c4fab24874f946be1f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2542,6 +2543,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &2770416949212084034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991252580339083562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e12b4d0893f92e4b81d64f936938927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 20
+  attackDistance: 2.5
+  movingSpeed: 5
 --- !u!1 &8991252580339083564
 GameObject:
   m_ObjectHideFlags: 0
