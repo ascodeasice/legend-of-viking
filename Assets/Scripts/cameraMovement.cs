@@ -19,8 +19,8 @@ public class cameraMovement : MonoBehaviour
     void Update()
     {
         yaw+=horizontalSpeed*Input.GetAxis("Mouse X");
-        pitch-=horizontalSpeed*Input.GetAxis("Mouse Y");
+        pitch-=verticalSpeed*Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(pitch,yaw,0.0f);
+        transform.eulerAngles = new Vector3(pitch,yaw,0.0f) ;
     }
 }

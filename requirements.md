@@ -3,7 +3,7 @@
 Output as an application
 - [x] Use package (total 5%)</br>
 Including those packages mentioned in the course
-- [ ] Infinite ground spawner (total 20%)</br>
+- [x] Infinite ground spawner (total 20%)</br>
 The ground will show up nearby the player, so the player won’t fall in to the void
 - [x] Player have normal behaviors (total 20%)
   - [x] Use “WASD” to Walk (2%)
