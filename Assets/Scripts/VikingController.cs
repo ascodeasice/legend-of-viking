@@ -40,23 +40,23 @@ public class VikingController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.forward;
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Camera.main.transform.forward;
             animator.SetFloat("speed", (shiftIsPressed?animatorRunSpeed:animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.A))
         {
 
-            transform.position += (shiftIsPressed ? runningSpeed : movingSpeed) * Time.deltaTime * Vector3.left;
+            transform.position += (shiftIsPressed ? runningSpeed : movingSpeed) * Time.deltaTime * Camera.main.transform.right*-1;
             animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.back;
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Camera.main.transform.forward*-1;
             animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Vector3.right;
+            transform.position += (shiftIsPressed?runningSpeed:movingSpeed) * Time.deltaTime * Camera.main.transform.right;
             animator.SetFloat("speed", (shiftIsPressed ? animatorRunSpeed : animatorWalkSpeed));
         }
         if (onGround && Input.GetKey(KeyCode.Space))

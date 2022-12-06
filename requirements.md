@@ -5,12 +5,12 @@ Output as an application
 Including those packages mentioned in the course
 - [ ] Infinite ground spawner (total 20%)</br>
 The ground will show up nearby the player, so the player won’t fall in to the void
-- [ ] Player have normal behaviors (total 20%)
+- [x] Player have normal behaviors (total 20%)
   - [x] Use “WASD” to Walk (2%)
   - [x] Use “WASD + left shift” to Run (3%)
   - [x] Use “space” to Jump (one jump at the same time), gravity and stand on the ground (5%)
-  - [ ] Rotate left/right with camera “by mouse movement” (5%)
-  - [ ] Look up/down without moving the character “by mouse movement “(5%)
+  - [x] Rotate left/right with camera “by mouse movement” (5%)
+  - [x] Look up/down without moving the character “by mouse movement “(5%)
 - [ ] Battle mechanism (total 30%)
     - [ ] Randomly generate emenies on the map (3%)
     - [ ] If player and enemy is close enough, enemy will chase player (3%)
