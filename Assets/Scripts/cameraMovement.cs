@@ -21,6 +21,9 @@ public class cameraMovement : MonoBehaviour
         yaw+=horizontalSpeed*Input.GetAxis("Mouse X");
         pitch-=verticalSpeed*Input.GetAxis("Mouse Y");
 
+        // add limit of camera angle
+        pitch = Mathf.Clamp(pitch, -60f, 60f);
+
         transform.eulerAngles = new Vector3(pitch,yaw,0.0f) ;
     }
 }

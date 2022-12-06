@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f988896e79def894088f6ea69f6a17e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingForce: 15
+  jumpingForce: 5
   movingSpeed: 10
   runningSpeed: 15
 --- !u!114 &54842924
@@ -561,18 +561,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5022040663393688504, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.81463075
-      objectReference: {fileID: 0}
-    - target: {fileID: 5022040663393688504, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.013193671
-      objectReference: {fileID: 0}
-    - target: {fileID: 5022040663393688504, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.45854
-      objectReference: {fileID: 0}
     - target: {fileID: 5671218218869011869, guid: bb7e5c4efc231874eabbcdceb4cd79cd, type: 3}
       propertyPath: m_RootOrder
       value: 1
