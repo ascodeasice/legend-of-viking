@@ -24,26 +24,21 @@ public class enemyAgression : MonoBehaviour
 
     void chasePlayer()
     {
-        // if close enough, attack
-        // else, move towards player
+        Vector3 worldDeltaPosition = playerPosition - transform.position;
+        // rotate towards player
+        worldDeltaPosition.y = 0;
+        var rotation = Quaternion.LookRotation(worldDeltaPosition);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
 
         if (distanceWithPlayer <= attackDistance)
         {
             animator.SetBool("attack",true);
             // attack animation is end
-            //if (animator.GetCurrentAnimatorStateInfo(2).normalizedTime > 1)
-            //{
-
-            //}
             // TODO attack player
         }
-        else if (distanceWithPlayer <= chaseDistance)
+        if (distanceWithPlayer <= chaseDistance)
         {
-            Vector3 worldDeltaPosition = playerPosition - transform.position;
-            // rotate towards player
-            worldDeltaPosition.y = 0;
-            var rotation = Quaternion.LookRotation(worldDeltaPosition);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+            
             // move towards player
             float dx = Vector3.Dot(Vector3.right, worldDeltaPosition);
             float dz = Vector3.Dot(Vector3.forward, worldDeltaPosition);
@@ -67,12 +62,20 @@ public class enemyAgression : MonoBehaviour
         chasePlayer();
     }
 
-    private void OnAnimatorMove()
+    private void OnCollisionEnter(Collision collision)
     {
-        if (distanceWithPlayer <= attackDistance)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player is hurt");
+            Debug.Log("Player is hurt");
         }
-        
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player is hurt");
+        }
+
     }
 }
