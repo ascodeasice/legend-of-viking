@@ -8,7 +8,7 @@ public class playerLife : MonoBehaviour
 {
     float life = 100;
     bool canTakeDamage = true;
-    [SerializeField] TextMeshProUGUI hpText;
+    [SerializeField] Slider healthBarSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,8 @@ public class playerLife : MonoBehaviour
         }
 
         life -= damage;
-        hpText.text = $"HP:{life}/100";
+        Debug.Log(life);
+        healthBarSlider.value = life>0?life:0;
         canTakeDamage = false;
         if (life <= 0)
         {
