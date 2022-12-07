@@ -8,9 +8,7 @@ public class playerLife : MonoBehaviour
 {
     float life = 100;
     bool canTakeDamage = true;
-    [SerializeField] Slider healthBarSlider;
-    [SerializeField] Gradient gradient;
-    [SerializeField] Image fill;
+    [SerializeField] healthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +33,7 @@ public class playerLife : MonoBehaviour
 
         life -= damage;
         canTakeDamage = false;
-
-        healthBarSlider.value = life>0?life:0;
-        fill.color = gradient.Evaluate(healthBarSlider.normalizedValue);
+        healthBar.setHealth(life);
 
         if (life <= 0)
         {

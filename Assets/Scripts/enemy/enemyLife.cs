@@ -5,10 +5,11 @@ using UnityEngine;
 public class enemyLife : MonoBehaviour
 {
     // Start is called before the first frame updatef
-    float life = 60;
+    float life =100;
     Animator animator;
     bool canTakeDamage = true;
     [SerializeField] GameObject coinPrefab;
+    [SerializeField] healthBar healthBar;
     Vector3 coinSpawnTransform=new Vector3(0,2.5f,0);
 
     void noDamageAfterHit()
@@ -34,6 +35,8 @@ public class enemyLife : MonoBehaviour
 
         life -= damage;
         canTakeDamage=false;
+        healthBar.setHealth(life);
+
         if (life <= 0)
         {
             animator.SetBool("attack", false);
