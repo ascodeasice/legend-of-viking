@@ -5,7 +5,6 @@ using UnityEngine;
 public class VikingCombat : MonoBehaviour
 {
     Animator animator;
-    bool onGround = false;
     float damage = 20;
 
     // Start is called before the first frame update
@@ -18,10 +17,10 @@ public class VikingCombat : MonoBehaviour
     void Update()
     {
         animator.SetBool("attacking", false);
-        if (!onGround)
-        {
-            return;
-        }
+        //if (!onGround)
+        //{
+        //    return;
+        //}
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -29,21 +28,6 @@ public class VikingCombat : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("ground"))
-        {
-            onGround = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("ground"))
-        {
-            onGround = false;
-        }
-    }
 
     private void OnTriggerStay(Collider other)
     {

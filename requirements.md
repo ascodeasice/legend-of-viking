@@ -17,7 +17,7 @@ The ground will show up nearby the player, so the player won’t fall in to the 
     - [x] Both player and enemy can attack each other (5%)
     - [x] If enemy is dead, show it’s corpse (5%)
     - [x] If enemy is dead, it drops coins, player can pick it up by press F, and increase the number of coins player have (5%)
-    - [ ] UI for player’s health bar and number of coins, health bar for enemy too (7%)
+    - [x] UI for player’s health bar and number of coins, health bar for enemy too (7%)
     - [ ] If player’s is dead, show end game screen, and can go back to menu (2%)
 - [x] Use Animator on player & enemy (total 15%)
   - [x] Normal animation, like walk, run, jump (10%)
