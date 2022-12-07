@@ -33,8 +33,6 @@ public class enemyAgression : MonoBehaviour
         if (distanceWithPlayer <= attackDistance)
         {
             animator.SetBool("attack",true);
-            // attack animation is end
-            // TODO attack player
         }
         if (distanceWithPlayer <= chaseDistance)
         {
@@ -66,7 +64,8 @@ public class enemyAgression : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player is hurt");
+            var healthComponent = collision.gameObject.GetComponent<playerLife>();
+            healthComponent.takeDamage(10);
         }
     }
 
@@ -74,8 +73,8 @@ public class enemyAgression : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player is hurt");
+            var healthComponent = collision.gameObject.GetComponent<playerLife>();
+            healthComponent.takeDamage(10);
         }
-
     }
 }

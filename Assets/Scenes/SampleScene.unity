@@ -204,6 +204,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772282a9c6c1eae48b09990e7b84da2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &54842928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54842909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f490a96d8f9161241902753a57b3597d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &54842930
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54842909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 5, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 2.5}
 --- !u!1 &102303801
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2320242346871082183, guid: 5fb0992acbf45fe45a8597e62e5814c3, type: 3}
-  maxEnemyCount: 1
+  maxEnemyCount: 10
 --- !u!4 &1361678271
 Transform:
   m_ObjectHideFlags: 0
