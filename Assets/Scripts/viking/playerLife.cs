@@ -10,7 +10,6 @@ public class playerLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        takeDamage(10);
         InvokeRepeating("noDamageAfterHit", 0, 1.0f);
     }
 
@@ -36,10 +35,5 @@ public class playerLife : MonoBehaviour
         {
             // TODO canvas show player's dead
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

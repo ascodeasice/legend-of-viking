@@ -14,7 +14,7 @@ The ground will show up nearby the player, so the player won’t fall in to the 
 - [ ] Battle mechanism (total 30%)
     - [x] Randomly generate emenies on the map (3%)
     - [x] If player and enemy is close enough, enemy will chase player (3%)
-    - [ ] Both player and enemy can attack each other (5%)
+    - [x] Both player and enemy can attack each other (5%)
     - [ ] If enemy is dead, show it’s corpse (5%)
     - [ ] If enemy is dead, it drops coins, player can pick it up by press F, and increase the number of coins player have (5%)
     - [ ] UI for player’s health bar and number of coins, health bar for enemy too (7%)

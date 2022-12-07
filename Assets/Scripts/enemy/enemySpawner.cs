@@ -8,7 +8,7 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] int maxEnemyCount;
     float xPosition;
     float zPosition;
-    int enemyCount;
+    public int enemyCount;
     float spawnRange = 10;
     float intervalSeconds = 2;
 

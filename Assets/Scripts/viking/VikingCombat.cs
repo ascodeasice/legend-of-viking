@@ -6,6 +6,7 @@ public class VikingCombat : MonoBehaviour
 {
     Animator animator;
     bool onGround = false;
+    float damage = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,14 @@ public class VikingCombat : MonoBehaviour
         if (collision.gameObject.CompareTag("ground"))
         {
             onGround = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("enemy")&&animator.GetBool("attacking"))
+        {
+            other.gameObject.GetComponent<enemyLife>().takeDamage(damage);
         }
     }
 }

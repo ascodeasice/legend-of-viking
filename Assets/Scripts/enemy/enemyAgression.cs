@@ -12,6 +12,7 @@ public class enemyAgression : MonoBehaviour
     [SerializeField] float movingSpeed;
     int damping = 2;
     float distanceWithPlayer = -1;
+    bool dead = false;
 
     Animator animator;
 
@@ -36,22 +37,20 @@ public class enemyAgression : MonoBehaviour
         }
         if (distanceWithPlayer <= chaseDistance)
         {
-            
             // move towards player
             float dx = Vector3.Dot(Vector3.right, worldDeltaPosition);
             float dz = Vector3.Dot(Vector3.forward, worldDeltaPosition);
             transform.position += new Vector3(dx,0,dz ) * movingSpeed/Time.deltaTime/1000000;
             animator.SetBool("run", true);
         }
-        else
-        {
-            // idle
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        dead = animator.GetBool("dead");
+        if (dead)
+            return;
         animator.SetBool("run", false);
         animator.SetBool("attack", false);
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -62,6 +61,8 @@ public class enemyAgression : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (dead)
+            return;
         if (collision.gameObject.CompareTag("Player"))
         {
             var healthComponent = collision.gameObject.GetComponent<playerLife>();
@@ -71,6 +72,8 @@ public class enemyAgression : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (dead)
+            return;
         if (collision.gameObject.CompareTag("Player"))
         {
             var healthComponent = collision.gameObject.GetComponent<playerLife>();
