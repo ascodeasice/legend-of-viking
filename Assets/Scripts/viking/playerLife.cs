@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerLife : MonoBehaviour
 {
     float life = 100;
     bool canTakeDamage = true;
+    [SerializeField] TextMeshProUGUI hpText;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +32,8 @@ public class playerLife : MonoBehaviour
         }
 
         life -= damage;
+        hpText.text = $"HP:{life}/100";
         canTakeDamage = false;
-        Debug.Log($"PlayerLife: {life}");
         if (life <= 0)
         {
             // TODO canvas show player's dead
