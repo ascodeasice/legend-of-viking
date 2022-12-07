@@ -10,7 +10,7 @@ public class enemySpawner : MonoBehaviour
     float zPosition;
     public int enemyCount;
     float spawnRange = 10;
-    float intervalSeconds = 2;
+    float intervalSeconds = 5;
 
     Vector3 playerPosition = Vector3.zero;
 

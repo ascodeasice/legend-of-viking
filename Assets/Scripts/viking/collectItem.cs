@@ -17,16 +17,16 @@ public class collectItem : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         // NOTE collect item with trigger or overlapSphere?
         if (other.gameObject.CompareTag("collectable"))
         {
-            if (other.name.Contains("Coin"))
+            if (other.name.Contains("Coin") && Input.GetKey(KeyCode.F))
             {
                 coinCount++;
                 Debug.Log(coinCount);
-                GameObject.Destroy(other.gameObject);
+                GameObject.Destroy(other.transform.parent.gameObject);
             }                
         }
     }

@@ -10,6 +10,7 @@ public class enemyAgression : MonoBehaviour
     [SerializeField] float chaseDistance;
     [SerializeField] float attackDistance;
     [SerializeField] float movingSpeed;
+    float positionShiftMinVal = 0.011f;
     int damping = 2;
     float distanceWithPlayer = -1;
     bool dead = false;
@@ -40,7 +41,12 @@ public class enemyAgression : MonoBehaviour
             // move towards player
             float dx = Vector3.Dot(Vector3.right, worldDeltaPosition);
             float dz = Vector3.Dot(Vector3.forward, worldDeltaPosition);
-            transform.position += new Vector3(dx,0,dz ) * movingSpeed/Time.deltaTime/10000;
+            Vector3 positionShift= new Vector3(dx, 0, dz) * movingSpeed * Time.deltaTime;
+            // prevent twtiching(moving too short distance)
+            if (positionShift.magnitude > positionShiftMinVal)
+            {
+                transform.position += positionShift;
+            }
             animator.SetBool("run", true);
         }
     }

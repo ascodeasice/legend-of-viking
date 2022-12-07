@@ -61,7 +61,7 @@ public class VikingController : MonoBehaviour
         }
         if (onGround && Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(jumpingForce * Vector3.up);
+            //rb.AddForce(jumpingForce * Vector3.up);
             rb.velocity = new Vector3(rb.velocity.x,jumpingForce,rb.velocity.z);
             animator.SetBool("jumping", true);
         }
