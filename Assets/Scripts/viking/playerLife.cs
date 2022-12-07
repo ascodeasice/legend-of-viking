@@ -9,6 +9,8 @@ public class playerLife : MonoBehaviour
     float life = 100;
     bool canTakeDamage = true;
     [SerializeField] Slider healthBarSlider;
+    [SerializeField] Gradient gradient;
+    [SerializeField] Image fill;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +34,11 @@ public class playerLife : MonoBehaviour
         }
 
         life -= damage;
-        Debug.Log(life);
-        healthBarSlider.value = life>0?life:0;
         canTakeDamage = false;
+
+        healthBarSlider.value = life>0?life:0;
+        fill.color = gradient.Evaluate(healthBarSlider.normalizedValue);
+
         if (life <= 0)
         {
             // TODO canvas show player's dead
