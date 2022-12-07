@@ -27,7 +27,7 @@ public class enemyLife : MonoBehaviour
 
     public void takeDamage(float damage)
     {
-        if (!canTakeDamage)
+        if (!canTakeDamage||animator.GetBool("dead"))
         {
             return;
         }
