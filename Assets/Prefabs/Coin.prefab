@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4907091286558217179}
   - component: {fileID: 4907091286558217176}
   m_Layer: 0
-  m_Name: Viking_Shield
+  m_Name: Coin
   m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
