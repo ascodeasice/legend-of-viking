@@ -8,6 +8,8 @@ public class enemyLife : MonoBehaviour
     float life = 60;
     Animator animator;
     bool canTakeDamage = true;
+    [SerializeField] GameObject coinPrefab;
+    Vector3 coinSpawnTransform=new Vector3(0,2.5f,0);
 
     void noDamageAfterHit()
     {
@@ -34,9 +36,16 @@ public class enemyLife : MonoBehaviour
         canTakeDamage=false;
         if (life <= 0)
         {
+            animator.SetBool("attack", false);
             animator.SetBool("dead", true);
+
+            // allow enemySpawner spawn another enemy
             GameObject enemySpawner=GameObject.FindGameObjectWithTag("enemySpawner");
             enemySpawner.GetComponent<enemySpawner>().enemyCount--;
+
+            // drop coin
+            GameObject coin=Instantiate(coinPrefab, transform.position+coinSpawnTransform, Quaternion.Euler(90f, 0f, 0f));
+            coin.transform.SetParent(transform);
         }
     }
 }

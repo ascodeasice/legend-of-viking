@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b805c14700bc14c89b18dd596f3818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 4907091286558217177, guid: 453851fbd3d874b46b3fdc9c64e8059b, type: 3}
 --- !u!1 &2320242346871082187
 GameObject:
   m_ObjectHideFlags: 0

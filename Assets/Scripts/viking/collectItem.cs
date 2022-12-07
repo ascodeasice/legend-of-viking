@@ -19,9 +19,10 @@ public class collectItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // NOTE collect item with trigger or overlapSphere?
         if (other.gameObject.CompareTag("collectable"))
         {
-            if (other.name.Contains("coin"))
+            if (other.name.Contains("Coin"))
             {
                 coinCount++;
                 Debug.Log(coinCount);

@@ -41,7 +41,6 @@ public class enemyAgression : MonoBehaviour
             float dx = Vector3.Dot(Vector3.right, worldDeltaPosition);
             float dz = Vector3.Dot(Vector3.forward, worldDeltaPosition);
             transform.position += new Vector3(dx,0,dz ) * movingSpeed/Time.deltaTime/10000;
-            Debug.Log(transform.position);
             animator.SetBool("run", true);
         }
     }
