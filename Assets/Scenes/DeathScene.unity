@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c0074c87f41f64e8a855ac33b19cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  earnedCoinText: {fileID: 667012988}
 --- !u!1 &667012986
 GameObject:
   m_ObjectHideFlags: 0
