@@ -24,7 +24,7 @@ The ground will show up nearby the player, so the player won’t fall in to the 
   - [x] attack animation (5%)
 - [ ] Game menu (total 5%)
   - [x] It can start your game and exit your application (2%)
-  - [ ] Your game scene has the capability of switching back to your game menu (2%)
+  - [x] Your game scene has the capability of switching back to your game menu (2%)
   - [ ] An interface in your game to illustrate how to play your game (1%)
 - [ ] A completed “readme” file to illustrate (total 5%)
   - [ ] Environment
