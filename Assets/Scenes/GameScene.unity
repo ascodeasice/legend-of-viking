@@ -389,6 +389,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2320242346871082183, guid: 5fb0992acbf45fe45a8597e62e5814c3, type: 3}
   maxEnemyCount: 10
   enemyCount: 0
+  intervalSeconds: 5
 --- !u!4 &1361678271
 Transform:
   m_ObjectHideFlags: 0

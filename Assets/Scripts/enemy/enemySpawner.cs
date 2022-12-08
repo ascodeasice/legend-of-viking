@@ -10,7 +10,8 @@ public class enemySpawner : MonoBehaviour
     float zPosition;
     public int enemyCount;
     float spawnRange = 10;
-    float intervalSeconds = 5;
+    [SerializeField] float intervalSeconds;
+    [SerializeField] float minIntervalSeconds = 1;
     float waitSeconds=5;
 
     Vector3 playerPosition = Vector3.zero;
@@ -23,14 +24,21 @@ public class enemySpawner : MonoBehaviour
         StartCoroutine(EnemyDrop());
     }
 
+
+
     IEnumerator EnemyDrop()
     {
         if (!hasWaited)
         {
             yield return new WaitForSecondsRealtime(waitSeconds);
         }
-        while (enemyCount < maxEnemyCount)
+        while (true)
         {
+            if (enemyCount >= maxEnemyCount)
+            {
+                yield return new WaitForSeconds(intervalSeconds);
+                continue;
+            }
 
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
             xPosition = Random.Range(playerPosition.x - spawnRange, playerPosition.x + spawnRange);
@@ -38,6 +46,16 @@ public class enemySpawner : MonoBehaviour
             Instantiate(enemyPrefab, new Vector3(xPosition, playerPosition.y, zPosition), Quaternion.identity);
 
             yield return new WaitForSeconds(intervalSeconds);
+            if (intervalSeconds * 0.9f > minIntervalSeconds)
+            {
+                intervalSeconds *= 0.9f;
+            }
+            else
+            {
+                intervalSeconds = minIntervalSeconds;
+            }
+
+            Debug.Log(intervalSeconds);
             enemyCount++;
         }
     }

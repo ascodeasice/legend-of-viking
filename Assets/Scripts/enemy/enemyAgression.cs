@@ -10,7 +10,7 @@ public class enemyAgression : MonoBehaviour
     [SerializeField] float chaseDistance;
     [SerializeField] float attackDistance;
     [SerializeField] float movingSpeed;
-    float positionShiftMinVal = 0.011f;
+    float positionShiftMinVal = 0.005f;
     int damping = 2;
     float distanceWithPlayer = -1;
     bool dead = false;
