@@ -1,5 +1,5 @@
 # Requirements
-- [ ] Program works normally (total 5%)</br>
+- [x] Program works normally (total 5%)</br>
 Output as an application
 - [x] Use package (total 5%)</br>
 Including those packages mentioned in the course
@@ -27,13 +27,13 @@ The ground will show up nearby the player, so the player won’t fall in to the 
   - [x] Your game scene has the capability of switching back to your game menu (2%)
   - [x] An interface in your game to illustrate how to play your game (1%)
 - [ ] A completed “readme” file to illustrate (total 5%)
-  - [ ] Environment
-  - [ ] How to use (play) your game
-  - [ ] Your game
+  - [x] Environment
+  - [x] How to use (play) your game
+  - [x] Your game
   - [ ] Bonus
   - [ ] Feedback
 # Bonus
-- [ ] Music (up to 5%)
+- [x] Music (up to 5%)
 - [ ] A good game structure design (code) (up to 5%)</br>
 Show your code to convince assistants of what advantage the design is
 - [ ] Some special game objects which aren’t mentioned above (up to 5%)

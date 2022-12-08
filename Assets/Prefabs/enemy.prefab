@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 20
   attackDistance: 3
-  movingSpeed: 2
+  movingSpeed: 1
 --- !u!54 &3555861332249317492
 Rigidbody:
   m_ObjectHideFlags: 0

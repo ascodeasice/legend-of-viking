@@ -10,11 +10,19 @@ public class playerLife : MonoBehaviour
     float life = 100;
     bool canTakeDamage = true;
     [SerializeField] healthBar healthBar;
+    float deathHeight = -70f;
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("noDamageAfterHit", 0, 1.0f);
+    }
+    private void Update()
+    {
+        if (transform.position.y <= deathHeight)
+        {
+            SceneManager.LoadScene("deathScene");
+        }
     }
 
     void noDamageAfterHit()
