@@ -55,7 +55,6 @@ public class enemySpawner : MonoBehaviour
                 intervalSeconds = minIntervalSeconds;
             }
 
-            Debug.Log(intervalSeconds);
             enemyCount++;
         }
     }

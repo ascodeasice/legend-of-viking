@@ -32,7 +32,7 @@ public class enemyLife : MonoBehaviour
         {
             return;
         }
-
+        
         life -= damage;
         canTakeDamage=false;
         healthBar.setHealth(life);

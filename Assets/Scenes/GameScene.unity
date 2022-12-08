@@ -390,6 +390,7 @@ MonoBehaviour:
   maxEnemyCount: 10
   enemyCount: 0
   intervalSeconds: 5
+  minIntervalSeconds: 1
 --- !u!4 &1361678271
 Transform:
   m_ObjectHideFlags: 0
@@ -507,6 +508,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1605292649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7825946624956658182, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
+  m_PrefabInstance: {fileID: 7825946624198954546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605292660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605292649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8802c8f923b648a4cbb1403a8563bc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1850447213
 GameObject:
   m_ObjectHideFlags: 0
