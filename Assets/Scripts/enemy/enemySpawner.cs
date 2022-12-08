@@ -11,9 +11,11 @@ public class enemySpawner : MonoBehaviour
     public int enemyCount;
     float spawnRange = 10;
     float intervalSeconds = 5;
+    float waitSeconds=5;
 
     Vector3 playerPosition = Vector3.zero;
-
+    bool hasWaited=false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +25,13 @@ public class enemySpawner : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
+        if (!hasWaited)
+        {
+            yield return new WaitForSecondsRealtime(waitSeconds);
+        }
         while (enemyCount < maxEnemyCount)
         {
+
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
             xPosition = Random.Range(playerPosition.x - spawnRange, playerPosition.x + spawnRange);
             zPosition = Random.Range(playerPosition.z - spawnRange, playerPosition.z + spawnRange);
