@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerLife : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class playerLife : MonoBehaviour
 
         if (life <= 0)
         {
-            // TODO canvas show player's dead
+            SceneManager.LoadScene("deathScene");
         }
     }
 }

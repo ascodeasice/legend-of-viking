@@ -17,10 +17,6 @@ public class VikingCombat : MonoBehaviour
     void Update()
     {
         animator.SetBool("attacking", false);
-        //if (!onGround)
-        //{
-        //    return;
-        //}
 
         if (Input.GetKey(KeyCode.Mouse0))
         {

@@ -7,18 +7,9 @@ using UnityEngine.UI;
 public class collectItem : MonoBehaviour
 {
     // Start is called before the first frame update
-    int coinCount = 0;
+    public static int coinCount = 0;
     [SerializeField] TextMeshProUGUI coinText;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerStay(Collider other)
     {
