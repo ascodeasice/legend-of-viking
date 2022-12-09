@@ -21,13 +21,45 @@ The enemy will chase you if you're near them, and stop when you're far away.
 # Bonus
 ## Mentioned in PowerPoint
 - Background music(Song of Storms, Legend of Zelda OST) 
+- Invincible item player can consume(press F) (10% drop rate)
+- Special game object: health item (10% chance), player can consume (press F) and restore 10HP
+- Code Structure(See below)
 
 ## Additional
 - Additional Visual Effects   
     - Different colors of health bar to show player HP is high/low
     - Better fonts, and design of UI ( than default components )
+    - hover effects of button
+    - Rotation of dropped items
+    - death animation for enemies
+- Additional Sound Effects
+    - Jump sound
+    - Collect item sound
 - Invincible time for player and enemy when they get hit
+- Game story(a scene)
+## Code Structure
 
+我根據功能將script分裝在
+  1. enemy
+  2. map
+  3. player
+  4. sceneManaging
+  5. UI 
+---
+五個資料夾中，這樣規劃的優點是:
+
+### 一、分類直覺
+如果要為敵人加上新功能，如新攻擊方式，就可以在enemy資料夾創新的檔案就好；有關地圖物件的script都在map資料夾中；有關玩家的在player；如果要做場景間的切換，就在sceneManaging；而關於canvas設計、物件的腳本則在UI資料夾。
+
+在分類時不需要多想就能開始寫程式。
+### 二、容易新增功能
+因為每個資料夾相當於定義物件的行為，所以要新增功能時，就可以簡易的讓物件做出對應的行為。
+
+例如:敵人死亡掉落金幣、玩家按F可以撿起這個功能:
+
+就可以分別在enemy資料夾用一個檔案定義敵人死亡行為、在player資料夾用另一個檔案偵測玩家撿起，實作功能上很直覺化。
+### 三、容易找出bug來源
+因為程式對應到(資料夾名稱的)物件，所以哪裡出了問題就可以直接找到對應的資料夾、C#檔案，不斷往回推問題開始的地方，方便Debug。
 # Feedback
 我從這個作業學到了很多東西，除了基本Unity遊戲製作之外，我覺得最有價值的東西是Debug與處理問題的經驗。  
 

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class startGame : MonoBehaviour
 {
-    public void startGame()
+    public void loadStoryScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

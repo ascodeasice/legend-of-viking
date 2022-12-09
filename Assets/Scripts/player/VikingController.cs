@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Animator))]
 
-public class VikingController : MonoBehaviour
+public class vikingController : MonoBehaviour
 {
     public float jumpingForce;
     MeshRenderer mr;
@@ -17,8 +17,6 @@ public class VikingController : MonoBehaviour
     Rigidbody rb;
     bool onGround = false;
     Animator animator;
-    bool run = false;
-    AudioSource footstep;
 
     float animatorWalkSpeed = 1;
     float animatorRunSpeed = 2;
@@ -29,7 +27,6 @@ public class VikingController : MonoBehaviour
         mr = GetComponent<MeshRenderer>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        footstep = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

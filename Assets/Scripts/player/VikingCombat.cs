@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VikingCombat : MonoBehaviour
+public class vikingCombat : MonoBehaviour
 {
     Animator animator;
     float damage = 20;
