@@ -26,12 +26,12 @@ The ground will show up nearby the player, so the player won’t fall in to the 
   - [x] It can start your game and exit your application (2%)
   - [x] Your game scene has the capability of switching back to your game menu (2%)
   - [x] An interface in your game to illustrate how to play your game (1%)
-- [ ] A completed “readme” file to illustrate (total 5%)
+- [x] A completed “readme” file to illustrate (total 5%)
   - [x] Environment
   - [x] How to use (play) your game
   - [x] Your game
-  - [ ] Bonus
-  - [ ] Feedback
+  - [x] Bonus
+  - [x] Feedback
 # Bonus
 - [x] Music (up to 5%)
 - [ ] A good game structure design (code) (up to 5%)</br>
