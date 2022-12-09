@@ -40,6 +40,7 @@ public class enemySpawner : MonoBehaviour
                 continue;
             }
 
+
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
             xPosition = Random.Range(playerPosition.x - spawnRange, playerPosition.x + spawnRange);
             zPosition = Random.Range(playerPosition.z - spawnRange, playerPosition.z + spawnRange);

@@ -450,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 4907091286558217177, guid: 453851fbd3d874b46b3fdc9c64e8059b, type: 3}
   healthBar: {fileID: 4590950745915971855}
+  invincibleItemPrefab: {fileID: 114524823946148731, guid: 4eca97b8c0386954e882b0fadedd9441, type: 3}
 --- !u!1 &2320242346871082187
 GameObject:
   m_ObjectHideFlags: 0

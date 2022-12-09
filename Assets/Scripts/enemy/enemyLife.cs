@@ -10,7 +10,9 @@ public class enemyLife : MonoBehaviour
     bool canTakeDamage = true;
     [SerializeField] GameObject coinPrefab;
     [SerializeField] healthBar healthBar;
-    Vector3 coinSpawnTransform=new Vector3(0,2.5f,0);
+    [SerializeField] GameObject invincibleItemPrefab;
+    GameObject spawnItem; // item to drop
+    Vector3 itemSpawnShift =new Vector3(0,2.5f,0);
 
     void noDamageAfterHit()
     {
@@ -46,9 +48,19 @@ public class enemyLife : MonoBehaviour
             GameObject enemySpawner=GameObject.FindGameObjectWithTag("enemySpawner");
             enemySpawner.GetComponent<enemySpawner>().enemyCount--;
 
-            // drop coin
-            GameObject coin=Instantiate(coinPrefab, transform.position+coinSpawnTransform, Quaternion.Euler(90f, 0f, 0f));
-            coin.transform.SetParent(transform);
+            // drop items
+            float probability = Random.Range(1, 101);
+            // 10% spawn invincible item
+            if (probability <= 10)
+            {
+                spawnItem = Instantiate(invincibleItemPrefab, transform.position + itemSpawnShift, Quaternion.Euler(-90f, 0f, 0f));
+            }
+            else
+            {
+                spawnItem = Instantiate(coinPrefab, transform.position + itemSpawnShift, Quaternion.Euler(90f, 0f, 0f));
+            }
+
+            spawnItem.transform.SetParent(transform);
         }
     }
 }
