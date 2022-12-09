@@ -10,7 +10,10 @@ public class playerLife : MonoBehaviour
     float life = 100;
     bool canTakeDamage = true;
     [SerializeField] healthBar healthBar;
+    [SerializeField] Image fill;
     float deathHeight = -70f;
+    public bool isInvincible = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +26,27 @@ public class playerLife : MonoBehaviour
         {
             SceneManager.LoadScene("deathScene");
         }
+
+        if (isInvincible)
+        {
+            fill.color = Color.cyan;
+            canTakeDamage = false;
+        }
+
+        else
+        {
+            healthBar.setHealth(life);
+            // restore health bar color
+        }
     }
 
     void noDamageAfterHit()
     {
+        if (isInvincible)
+        {
+            return;
+        }
+
         if (!canTakeDamage)
         {
             canTakeDamage = true;

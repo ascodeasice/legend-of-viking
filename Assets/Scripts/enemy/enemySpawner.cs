@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     float xPosition;
     float zPosition;
     public int enemyCount;
-    float spawnRange = 30;
+    float spawnRange = 25;
     [SerializeField] float intervalSeconds;
     [SerializeField] float minIntervalSeconds = 1;
     float waitSeconds=5;
@@ -30,7 +30,7 @@ public class enemySpawner : MonoBehaviour
     {
         if (!hasWaited)
         {
-            yield return new WaitForSecondsRealtime(waitSeconds);
+            yield return new WaitForSeconds(waitSeconds);
         }
         while (true)
         {

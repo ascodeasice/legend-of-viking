@@ -16,12 +16,21 @@ public class collectItem : MonoBehaviour
         // NOTE collect item with trigger or overlapSphere?
         if (other.gameObject.CompareTag("collectable"))
         {
-            if (other.name.Contains("Coin") && Input.GetKey(KeyCode.F))
+            if (!Input.GetKey(KeyCode.F))
+            {
+                return;
+            }
+            if (other.name.Contains("Coin") )
             {
                 coinCount++;
-                coinText.text=$"COIN:{coinCount}";
+                coinText.text = $"COIN:{coinCount}";
                 GameObject.Destroy(other.transform.parent.gameObject);
-            }                
+            }
+            else if (other.name.Contains("invincible"))
+            {
+                transform.GetComponent<invincibleMode>().StartInvincibleMode();
+                GameObject.Destroy(other.transform.parent.gameObject);
+            }
         }
     }
 }

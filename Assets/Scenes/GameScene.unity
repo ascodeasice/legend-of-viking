@@ -621,6 +621,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1605292682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605292649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82379a0ae320a854e81fbff418013591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibleTime: 5
 --- !u!1 &1850447213
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +677,17 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 518a4536d2456b14da22f83827c1a023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1883142508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703284747259077983, guid: 0b032a3256ef3df4186e943c47e597fa, type: 3}
+  m_PrefabInstance: {fileID: 6703284746847862811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1937448302 stripped
@@ -989,9 +1013,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7825946624186587138, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
+      propertyPath: fill
+      value: 
+      objectReference: {fileID: 1883142508}
+    - target: {fileID: 7825946624186587138, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1937448304}
+    - target: {fileID: 7825946624186587138, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
+      propertyPath: isInvincible
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825946624186587138, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
+      propertyPath: invincibleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: c5cba5482a2a3264bbc51c4f83e23bfe, type: 2}
     - target: {fileID: 7825946624186587142, guid: 5d6c1b0dbb5d89340899c62fcfbe681c, type: 3}
       propertyPath: coinText
       value: 
