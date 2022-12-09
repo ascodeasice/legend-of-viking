@@ -9,7 +9,7 @@ public class collectItem : MonoBehaviour
     // Start is called before the first frame update
     public static int coinCount = 0;
     [SerializeField] TextMeshProUGUI coinText;
-
+    [SerializeField] playerLife lifeScript;
 
     private void OnTriggerStay(Collider other)
     {
@@ -29,6 +29,11 @@ public class collectItem : MonoBehaviour
             else if (other.name.Contains("invincible"))
             {
                 transform.GetComponent<invincibleMode>().StartInvincibleMode();
+                GameObject.Destroy(other.transform.parent.gameObject);
+            }
+            else if (other.name.Contains("healthItem"))
+            {
+                lifeScript.setHealth(lifeScript.life + 10);
                 GameObject.Destroy(other.transform.parent.gameObject);
             }
         }

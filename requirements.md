@@ -36,7 +36,7 @@ The ground will show up nearby the player, so the player won’t fall in to the 
 - [x] Music (up to 5%)
 - [ ] A good game structure design (code) (up to 5%)</br>
 Show your code to convince assistants of what advantage the design is
-- [ ] Some special game objects which aren’t mentioned above (up to 5%)
+- [x] Some special game objects which aren’t mentioned above (up to 5%)
 - [x] An item a player would be invincible after eating
-- [ ] How good your game is (up to 3%)
+- [x] How good your game is (up to 3%)
 

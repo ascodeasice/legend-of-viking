@@ -8,11 +8,14 @@ public class enemyLife : MonoBehaviour
     float life =100;
     Animator animator;
     bool canTakeDamage = true;
-    [SerializeField] GameObject coinPrefab;
     [SerializeField] healthBar healthBar;
+    [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject invincibleItemPrefab;
+    [SerializeField] GameObject healthItemPrefab;
     GameObject spawnItem; // item to drop
     Vector3 itemSpawnShift =new Vector3(0,2.5f,0);
+    float invincibleItemProbability = 10;
+    float healthItemProbability = 10;
 
     void noDamageAfterHit()
     {
@@ -50,10 +53,13 @@ public class enemyLife : MonoBehaviour
 
             // drop items
             float probability = Random.Range(1, 101);
-            // 10% spawn invincible item
-            if (probability <= 10)
+            if (probability <= invincibleItemProbability)
             {
                 spawnItem = Instantiate(invincibleItemPrefab, transform.position + itemSpawnShift, Quaternion.Euler(-90f, 0f, 0f));
+            }
+            else if (probability <= invincibleItemProbability + healthItemProbability)
+            {
+                spawnItem = Instantiate(healthItemPrefab, transform.position + itemSpawnShift, Quaternion.Euler(-90f, 0f, 0f));
             }
             else
             {

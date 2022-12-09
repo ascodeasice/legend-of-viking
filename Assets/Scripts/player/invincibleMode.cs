@@ -5,12 +5,21 @@ using UnityEngine;
 public class invincibleMode : MonoBehaviour
 {
     [SerializeField]int invincibleTime;
+    [SerializeField] playerLife playerLifeScript;
     int timeLeft = 5;
     public void StartInvincibleMode()
     {
         timeLeft = invincibleTime;
-        transform.GetComponent<playerLife>().isInvincible = true;
-        StartCoroutine(countDown());
+        // if coroutine is running, update the time instead of starting again
+        if (playerLifeScript.isInvincible)
+        {
+            timeLeft=invincibleTime;
+        }
+        else
+        {
+            playerLifeScript.isInvincible = true;
+            StartCoroutine(countDown());
+        }
     }
 
     IEnumerator countDown()
@@ -22,5 +31,6 @@ public class invincibleMode : MonoBehaviour
         }
 
         transform.GetComponent<playerLife>().isInvincible = false;
+        playerLifeScript.setHealth(playerLifeScript.life);
     }
 }

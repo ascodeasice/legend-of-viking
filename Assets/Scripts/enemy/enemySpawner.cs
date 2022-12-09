@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     float xPosition;
     float zPosition;
     public int enemyCount;
-    float spawnRange = 25;
+    float spawnRange = 20;
     [SerializeField] float intervalSeconds;
     [SerializeField] float minIntervalSeconds = 1;
     float waitSeconds=5;

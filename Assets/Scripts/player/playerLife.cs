@@ -4,10 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class playerLife : MonoBehaviour
 {
-    float life = 100;
+    public float life = 100;
     bool canTakeDamage = true;
     [SerializeField] healthBar healthBar;
     [SerializeField] Image fill;
@@ -31,12 +32,6 @@ public class playerLife : MonoBehaviour
         {
             fill.color = Color.cyan;
             canTakeDamage = false;
-        }
-
-        else
-        {
-            healthBar.setHealth(life);
-            // restore health bar color
         }
     }
 
@@ -68,5 +63,12 @@ public class playerLife : MonoBehaviour
         {
             SceneManager.LoadScene("deathScene");
         }
+    }
+
+    public void setHealth(float value)
+    {
+        value = Mathf.Clamp(value, 0, 100);
+        life = value;
+        healthBar.setHealth(value);
     }
 }
