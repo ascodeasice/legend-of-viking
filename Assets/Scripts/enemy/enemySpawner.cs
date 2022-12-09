@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     float xPosition;
     float zPosition;
     public int enemyCount;
-    float spawnRange = 10;
+    float spawnRange = 30;
     [SerializeField] float intervalSeconds;
     [SerializeField] float minIntervalSeconds = 1;
     float waitSeconds=5;
@@ -21,12 +21,12 @@ public class enemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(EnemyDrop());
+        StartCoroutine(EnemySpawn());
     }
 
 
 
-    IEnumerator EnemyDrop()
+    IEnumerator EnemySpawn()
     {
         if (!hasWaited)
         {
