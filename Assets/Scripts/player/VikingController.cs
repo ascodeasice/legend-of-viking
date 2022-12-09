@@ -13,6 +13,7 @@ public class VikingController : MonoBehaviour
     MeshRenderer mr;
     [SerializeField] float movingSpeed=10f;
     [SerializeField] float runningSpeed=15f;
+    [SerializeField] AudioSource jumpSound;
     Rigidbody rb;
     bool onGround = false;
     Animator animator;
@@ -64,14 +65,11 @@ public class VikingController : MonoBehaviour
             //rb.AddForce(jumpingForce * Vector3.up);
             rb.velocity = new Vector3(rb.velocity.x,jumpingForce,rb.velocity.z);
             animator.SetBool("jumping", true);
-        }
-        if (run && !footstep.isPlaying)
-        {
-            footstep.Play();
-        }
-        if (run && footstep.isPlaying)
-        {
-            footstep.Stop();
+
+            if (!jumpSound.isPlaying)
+            {
+                jumpSound.Play();
+            }
         }
     }
 
